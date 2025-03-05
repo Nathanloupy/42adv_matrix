@@ -25,7 +25,7 @@ class Vector
 
 		size_t getSize() const;
 
-		Matrix<K> toMatrix(size_t rows, size_t cols) const;
+		void toMatrix(Matrix<K> &matrix) const;
 
 		// EX00
 		void add(const Vector<K> &other);

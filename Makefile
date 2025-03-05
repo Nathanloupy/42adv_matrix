@@ -35,7 +35,7 @@ fclean: clean
 re: fclean all
 
 re_run:
-	@clear && clear 
+	@clear && clear
 	@make re
 	@./$(NAME) $(test)
 

@@ -29,7 +29,7 @@ class Matrix
 		size_t getRows() const;
 		size_t getCols() const;
 
-		Vector<K> toVector() const;
+		void toVector(Vector<K> &vector) const;
 
 		// EX00
 		void add(const Matrix<K> &other);

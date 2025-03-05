@@ -5,7 +5,7 @@ template <typename K>
 Matrix<K>::Matrix(size_t rows, size_t cols) : _rows(rows),
 											  _cols(cols)
 {
-	this->_data.reserve(rows * cols);
+	this->_data.resize(rows * cols);
 }
 
 template <typename K>
@@ -24,12 +24,10 @@ Matrix<K>::Matrix(size_t rows, size_t cols, const std::vector<K> &data) : _rows(
 		throw IncompatibleSizeException();
 	}
 	this->_data.resize(this->_rows * this->_cols);
-	for (size_t i = 0; i < this->_rows; i++)
+	for (size_t j = 0; j < this->_cols; j++)
 	{
-		for (size_t j = 0; j < this->_cols; j++)
-		{
-			(*this)[i, j] = data[i * this->_cols + j];
-		}
+		for (size_t i = 0; i < this->_rows; i++)
+			(*this)[i, j] = data[j * this->_rows + i];
 	}
 }
 
@@ -88,30 +86,27 @@ bool Matrix<K>::isSquare() const
 }
 
 template <typename K>
-Vector<K> Matrix<K>::toVector() const
+void Matrix<K>::toVector(Vector<K> &vector) const
 {
-	Vector<K> vector(this->_rows * this->_cols);
-	for (size_t i = 0; i < this->_rows; i++)
+	if (vector.getSize() != this->_rows * this->_cols)
 	{
-		for (size_t j = 0; j < this->_cols; j++)
-			vector[i * this->_cols + j] = (*this)[i, j];
+		throw IncompatibleSizeException();
 	}
-	return vector;
+	for (size_t j = 0; j < this->_cols; j++)
+	{
+		for (size_t i = 0; i < this->_rows; i++)
+			vector[j * this->_rows + i] = (*this)[i, j];
+	}
 }
 
 template <typename K>
 std::ostream &operator<<(std::ostream &os, const Matrix<K> &matrix)
 {
-	std::cout << "matrix.getRows(): " << matrix.getRows() << std::endl;
-	std::cout << "matrix.getCols(): " << matrix.getCols() << std::endl;
 	for (size_t i = 0; i < matrix.getRows(); i++)
 	{
 		os << "[ ";
 		for (size_t j = 0; j < matrix.getCols(); j++)
 		{
-			std::cout << "i: " << i << std::endl;
-			std::cout << "j: " << j << std::endl;
-			std::cout << "matrix[i, j]: " << matrix[i, j] << std::endl;
 			os << matrix[i, j] << " ";
 		}
 		os << "]" << "\n";

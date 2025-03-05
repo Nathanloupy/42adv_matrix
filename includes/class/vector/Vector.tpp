@@ -66,21 +66,19 @@ K &Vector<K>::operator[](size_t index)
 }
 
 template <typename K>
-Matrix<K> Vector<K>::toMatrix(size_t rows, size_t cols) const
+void Vector<K>::toMatrix(Matrix<K> &matrix) const
 {
-	if (rows * cols != this->_size)
+	if (matrix.getCols() * matrix.getRows() != this->_size)
 	{
 		throw IncompatibleSizeException();
 	}
-	Matrix<K> matrix(rows, cols);
-	for (size_t j = 0; j < cols; j++)
+	for (size_t j = 0; j < matrix.getCols(); j++)
 	{
-		for (size_t i = 0; i < rows; i++)
+		for (size_t i = 0; i < matrix.getRows(); i++)
 		{
-			matrix[i, j] = (*this)[j * rows + i];
+			matrix[i, j] = (*this)[j * matrix.getRows() + i];
 		}
 	}
-	return matrix;
 }
 
 template <typename K>
