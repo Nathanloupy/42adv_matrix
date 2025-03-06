@@ -34,6 +34,11 @@ class Vector
 
 		// EX03
 		K dot(const Vector<K> &v) const;
+
+		// EX04
+		float norm_1() const;
+		float norm() const;
+		float norm_inf() const;
 };
 
 template <typename K>
@@ -52,3 +57,4 @@ Vector<K> lerp(const Vector<K> &u, const Vector<K> &v, const float &t);
 #include "Vector_ex01.tpp"
 #include "Vector_ex02.tpp"
 #include "Vector_ex03.tpp"
+#include "Vector_ex04.tpp"
