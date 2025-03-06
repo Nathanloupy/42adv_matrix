@@ -2,8 +2,8 @@
 
 int main(int argc, char **argv)
 {
-	void (*tests[])(void) = {test_base, test_ex00, test_ex01, test_ex02, test_ex03, test_ex04};
-	std::string test_names[] = {"base", "ex00", "ex01", "ex02", "ex03", "ex04"};
+	void (*tests[])(void) = {test_base, test_ex00, test_ex01, test_ex02, test_ex03, test_ex04, test_ex05};
+	std::string test_names[] = {"base", "ex00", "ex01", "ex02", "ex03", "ex04", "ex05"};
 	if (argc != 2)
 	{
 		std::cerr << "Usage: " << argv[0] << " <test_number>" << std::endl;

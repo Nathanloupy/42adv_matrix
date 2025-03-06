@@ -52,9 +52,19 @@ Vector<K> linear_combination(const std::vector<Vector<K>> &vectors, const std::v
 template <typename K>
 Vector<K> lerp(const Vector<K> &u, const Vector<K> &v, const float &t);
 
+// EX05
+template <typename K>
+float angle_cos(const Vector<K> &u, const Vector<K> &v);
+
+// EX06
+template <typename K>
+Vector<K> cross_product(const Vector<K> &u, const Vector<K> &v);
+
 #include "Vector.tpp"
 #include "Vector_ex00.tpp"
 #include "Vector_ex01.tpp"
 #include "Vector_ex02.tpp"
 #include "Vector_ex03.tpp"
 #include "Vector_ex04.tpp"
+#include "Vector_ex05.tpp"
+#include "Vector_ex06.tpp"

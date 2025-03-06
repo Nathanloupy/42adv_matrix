@@ -10,3 +10,12 @@ class IncompatibleSizeException : public std::exception
 			return "Incompatible size";
 		}
 };
+
+class InvalidSizeException : public std::exception
+{
+	public:
+		const char *what() const throw()
+		{
+			return "Invalid size";
+		}
+};
