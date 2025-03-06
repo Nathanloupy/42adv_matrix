@@ -35,6 +35,10 @@ class Matrix
 		void add(const Matrix<K> &other);
 		void sub(const Matrix<K> &other);
 		void scl(const K &scalar);
+
+		// EX07
+		Vector<K> mul_vec(const Vector<K> &vec) const;
+		Matrix<K> mul_mat(const Matrix<K> &mat) const;
 };
 
 template <typename K>
@@ -48,7 +52,9 @@ Matrix<K> linear_combination(const std::vector<Matrix<K>> &matrices, const std::
 template <typename K>
 Matrix<K> lerp(const Matrix<K> &u, const Matrix<K> &v, const float &t);
 
+
 #include "Matrix.tpp"
 #include "Matrix_ex00.tpp"
 #include "Matrix_ex01.tpp"
 #include "Matrix_ex02.tpp"
+#include "Matrix_ex07.tpp"

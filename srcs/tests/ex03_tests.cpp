@@ -2,7 +2,6 @@
 
 void test_vector_ex03(void)
 {
-	std::cout << "Test Vector ex03" << std::endl;
 	std::vector<float> data1 = {1.0f, 2.0f, 3.0f};
 	Vector<float> u(data1);
 	std::cout << "u: " << std::endl;

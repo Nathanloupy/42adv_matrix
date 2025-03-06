@@ -18,4 +18,4 @@ Matrix<K> lerp(const Matrix<K> &u, const Matrix<K> &v, const float &t)
 		}
 	}
 	return result;
-}
+} // O(nm) in time, O(nm) in space
