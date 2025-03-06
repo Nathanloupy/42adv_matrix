@@ -15,6 +15,7 @@ SRCS_TESTS = srcs/tests/base_tests.cpp \
 			srcs/tests/ex03_tests.cpp \
 			srcs/tests/ex04_tests.cpp \
 			srcs/tests/ex05_tests.cpp \
+			srcs/tests/ex06_tests.cpp \
 
 OBJS_MAIN = $(SRCS_MAIN:.cpp=.o)
 
