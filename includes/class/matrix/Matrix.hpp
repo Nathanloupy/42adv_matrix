@@ -15,6 +15,10 @@ class Matrix
 		size_t _cols;
 		std::vector<K> _data;
 
+		// EX11 helpers
+		K determinant_2x2(void) const;
+		K determinant_3x3(void) const;
+
 	public:
 		Matrix(size_t rows, size_t cols);
 		Matrix(const Matrix &other);
@@ -45,6 +49,9 @@ class Matrix
 
 		// EX09
 		Matrix<K> transpose(void) const;
+
+		// EX11
+		K determinant(void) const;
 };
 
 template <typename K>
@@ -66,3 +73,5 @@ Matrix<K> lerp(const Matrix<K> &u, const Matrix<K> &v, const float &t);
 #include "Matrix_ex07.tpp"
 #include "Matrix_ex08.tpp"
 #include "Matrix_ex09.tpp"
+//...
+#include "Matrix_ex11.tpp"

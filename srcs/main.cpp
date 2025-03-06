@@ -4,10 +4,10 @@ int main(int argc, char **argv)
 {
 	void (*tests[])(void) = {test_base, test_ex00, test_ex01, test_ex02, test_ex03, \
 							test_ex04, test_ex05, test_ex06, test_ex07, test_ex08, \
-							test_ex09};
+							test_ex09, test_ex10, test_ex11};
 	std::string test_names[] = {"base", "ex00", "ex01", "ex02", "ex03", \
 								"ex04", "ex05", "ex06", "ex07", "ex08", \
-								"ex09"};
+								"ex09", "ex10", "ex11"};
 	if (argc != 2)
 	{
 		std::cerr << "Usage: " << argv[0] << " <test_number>" << std::endl;

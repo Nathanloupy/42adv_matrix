@@ -5,6 +5,10 @@ template <typename K>
 Matrix<K>::Matrix(size_t rows, size_t cols) : _rows(rows),
 											  _cols(cols)
 {
+	if (rows == 0 || cols == 0)
+	{
+		throw InvalidSizeException();
+	}
 	this->_data.resize(rows * cols);
 }
 
@@ -19,6 +23,10 @@ template <typename K>
 Matrix<K>::Matrix(size_t rows, size_t cols, const std::vector<K> &data) : _rows(rows),
 																		  _cols(cols)
 {
+	if (rows == 0 || cols == 0)
+	{
+		throw InvalidSizeException();
+	}
 	if (this->_rows * this->_cols != data.size())
 	{
 		throw IncompatibleSizeException();
