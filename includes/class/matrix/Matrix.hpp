@@ -41,7 +41,10 @@ class Matrix
 		Matrix<K> mul_mat(const Matrix<K> &mat) const;
 
 		// EX08
-		K trace() const;
+		K trace(void) const;
+
+		// EX09
+		Matrix<K> transpose(void) const;
 };
 
 template <typename K>
@@ -62,3 +65,4 @@ Matrix<K> lerp(const Matrix<K> &u, const Matrix<K> &v, const float &t);
 #include "Matrix_ex02.tpp"
 #include "Matrix_ex07.tpp"
 #include "Matrix_ex08.tpp"
+#include "Matrix_ex09.tpp"
