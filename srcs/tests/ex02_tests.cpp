@@ -38,6 +38,7 @@ void test_matrix_ex02(void)
 
 void test_ex02(void)
 {
+	std::cout << "Ex02 tests : [Vector/Matrix] Linear interpolation" << std::endl;
 	test_vector_ex02();
 	test_matrix_ex02();
 	std::cout << "--------------------------------" << std::endl;

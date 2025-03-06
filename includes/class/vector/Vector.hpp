@@ -31,6 +31,9 @@ class Vector
 		void add(const Vector<K> &other);
 		void sub(const Vector<K> &other);
 		void scl(const K &scalar);
+
+		// EX03
+		K dot(const Vector<K> &v) const;
 };
 
 template <typename K>
@@ -48,3 +51,4 @@ Vector<K> lerp(const Vector<K> &u, const Vector<K> &v, const float &t);
 #include "Vector_ex00.tpp"
 #include "Vector_ex01.tpp"
 #include "Vector_ex02.tpp"
+#include "Vector_ex03.tpp"

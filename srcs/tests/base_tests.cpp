@@ -82,6 +82,7 @@ void test_matrix_base(void)
 
 void test_base(void)
 {
+	std::cout << "Base tests : [Vector/Matrix]" << std::endl;
 	test_vector_base();
 	test_matrix_base();
 	std::cout << "--------------------------------" << std::endl;

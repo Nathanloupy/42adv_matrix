@@ -50,6 +50,7 @@ void test_matrix_ex01(void)
 
 void test_ex01(void)
 {
+	std::cout << "Ex01 tests : [Vector/Matrix] Linear combination" << std::endl;
 	test_vector_ex01();
 	test_matrix_ex01();
 	std::cout << "--------------------------------" << std::endl;

@@ -90,6 +90,7 @@ void test_matrix_ex00(void)
 
 void test_ex00(void)
 {
+	std::cout << "Ex00 tests : [Vector/Matrix] Add, Subtract and Scale" << std::endl;
 	test_vector_ex00();
 	test_matrix_ex00();
 	std::cout << "--------------------------------" << std::endl;
