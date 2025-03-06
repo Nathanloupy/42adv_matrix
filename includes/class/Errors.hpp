@@ -19,3 +19,12 @@ class InvalidSizeException : public std::exception
 			return "Invalid size";
 		}
 };
+
+class NotSquareMatrixException : public std::exception
+{
+	public:
+		const char *what() const throw()
+		{
+			return "Not a square matrix";
+		}
+};

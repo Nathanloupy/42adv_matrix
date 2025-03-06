@@ -9,3 +9,4 @@ void test_ex04(void);
 void test_ex05(void);
 void test_ex06(void);
 void test_ex07(void);
+void test_ex08(void);
