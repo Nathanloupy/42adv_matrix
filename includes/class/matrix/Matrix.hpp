@@ -44,6 +44,11 @@ std::ostream &operator<<(std::ostream &os, const Matrix<K> &matrix);
 template <typename K>
 Matrix<K> linear_combination(const std::vector<Matrix<K>> &matrices, const std::vector<K> &scalars);
 
+// EX02
+template <typename K>
+Matrix<K> lerp(const Matrix<K> &u, const Matrix<K> &v, const float &t);
+
 #include "Matrix.tpp"
 #include "Matrix_ex00.tpp"
 #include "Matrix_ex01.tpp"
+#include "Matrix_ex02.tpp"

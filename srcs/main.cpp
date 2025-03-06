@@ -2,22 +2,32 @@
 
 int main(int argc, char **argv)
 {
+	void (*tests[])(void) = {test_base, test_ex00, test_ex01, test_ex02};
+	std::string test_names[] = {"base", "ex00", "ex01", "ex02"};
 	if (argc != 2)
 	{
 		std::cerr << "Usage: " << argv[0] << " <test_number>" << std::endl;
 		std::cerr << "Available tests: " << std::endl;
-		std::cerr << "- base" << std::endl;
-		std::cerr << "- ex00" << std::endl;
-		std::cerr << "- ex01" << std::endl;
+		for (size_t i = 0; i < sizeof(test_names) / sizeof(std::string); i++)
+			std::cerr << "- " << test_names[i] << std::endl;
 		return (EXIT_FAILURE);
 	}
 	std::string test_name(argv[1]);
-	if (test_name == "base")
-		test_base();
-	else if (test_name == "ex00")
-		test_ex00();
-	else if (test_name == "ex01")
-		test_ex01();
-	//do a pointer functions table
-	return (EXIT_SUCCESS);
+	for (size_t i = 0; i < sizeof(test_names) / sizeof(std::string); i++)
+	{
+		if (test_name == test_names[i])
+		{
+			try
+			{
+				tests[i]();
+				return (EXIT_SUCCESS);
+			}
+			catch (const std::exception &e)
+			{
+				std::cerr << e.what() << std::endl;
+				return (EXIT_FAILURE);
+			}
+		}
+	}
+	return (EXIT_FAILURE);
 }

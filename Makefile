@@ -10,7 +10,8 @@ INCLUDES = -I./includes/ -I./includes/class/ -I./includes/class/matrix/ -I./incl
 SRCS_MAIN = srcs/main.cpp
 SRCS_TESTS = srcs/tests/base_tests.cpp \
 			srcs/tests/ex00_tests.cpp \
-			srcs/tests/ex01_tests.cpp
+			srcs/tests/ex01_tests.cpp \
+			srcs/tests/ex02_tests.cpp \
 
 OBJS_MAIN = $(SRCS_MAIN:.cpp=.o)
 

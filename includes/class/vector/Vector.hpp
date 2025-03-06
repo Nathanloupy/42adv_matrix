@@ -40,6 +40,11 @@ std::ostream &operator<<(std::ostream &os, const Vector<K> &vector);
 template <typename K>
 Vector<K> linear_combination(const std::vector<Vector<K>> &vectors, const std::vector<K> &scalars);
 
+// EX02
+template <typename K>
+Vector<K> lerp(const Vector<K> &u, const Vector<K> &v, const float &t);
+
 #include "Vector.tpp"
 #include "Vector_ex00.tpp"
 #include "Vector_ex01.tpp"
+#include "Vector_ex02.tpp"
