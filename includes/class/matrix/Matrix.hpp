@@ -11,13 +11,13 @@ template <typename K>
 class Matrix
 {
 	private:
-		size_t _rows;
-		size_t _cols;
-		std::vector<K> _data;
+		size_t			_rows;
+		size_t			_cols;
+		std::vector<K>	_data;
 
-		// EX11 helpers
-		K determinant_2x2(void) const;
-		K determinant_3x3(void) const;
+		// EX10
+		void swapRows(size_t row1, size_t row2);
+		Matrix<K> row_echelon_helper(float &determinant) const;
 
 	public:
 		Matrix(size_t rows, size_t cols);
@@ -29,9 +29,9 @@ class Matrix
 		const K &operator[](size_t row, size_t col) const;
 		K &operator[](size_t row, size_t col);
 
-		bool isSquare() const;
-		size_t getRows() const;
-		size_t getCols() const;
+		bool	isSquare() const;
+		size_t	getRows() const;
+		size_t	getCols() const;
 
 		void toVector(Vector<K> &vector) const;
 
@@ -49,6 +49,9 @@ class Matrix
 
 		// EX09
 		Matrix<K> transpose(void) const;
+
+		// EX10
+		Matrix<K> row_echelon(void) const;
 
 		// EX11
 		K determinant(void) const;
@@ -73,5 +76,5 @@ Matrix<K> lerp(const Matrix<K> &u, const Matrix<K> &v, const float &t);
 #include "Matrix_ex07.tpp"
 #include "Matrix_ex08.tpp"
 #include "Matrix_ex09.tpp"
-//...
+#include "Matrix_ex10.tpp"
 #include "Matrix_ex11.tpp"
