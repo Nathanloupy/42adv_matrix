@@ -3,6 +3,7 @@
 #include <iostream>
 #include <vector>
 
+#include "Complex.hpp"
 #include "tests.hpp"
 #include "utils.hpp"
 
