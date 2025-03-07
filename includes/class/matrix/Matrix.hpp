@@ -55,6 +55,12 @@ class Matrix
 
 		// EX11
 		K determinant(void) const;
+
+		// EX12
+		Matrix<K> inverse(void) const;
+
+		// EX13
+		size_t rank(void) const;
 };
 
 template <typename K>
@@ -78,3 +84,5 @@ Matrix<K> lerp(const Matrix<K> &u, const Matrix<K> &v, const float &t);
 #include "Matrix_ex09.tpp"
 #include "Matrix_ex10.tpp"
 #include "Matrix_ex11.tpp"
+#include "Matrix_ex12.tpp"
+#include "Matrix_ex13.tpp"

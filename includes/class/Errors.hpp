@@ -28,3 +28,12 @@ class NotSquareMatrixException : public std::exception
 			return "Not a square matrix";
 		}
 };
+
+class SingularMatrixException : public std::exception
+{
+	public:
+		const char *what() const throw()
+		{
+			return "Singular matrix";
+		}
+};

@@ -13,3 +13,7 @@ void test_ex08(void);
 void test_ex09(void);
 void test_ex10(void);
 void test_ex11(void);
+void test_ex12(void);
+void test_ex13(void);
+void test_ex14(void);
+void test_ex15(void);
