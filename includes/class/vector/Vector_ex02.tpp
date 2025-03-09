@@ -12,7 +12,7 @@ Vector<K> lerp(const Vector<K> &u, const Vector<K> &v, const float &t)
 	Vector<K> result(u.getSize());
 	for (size_t i = 0; i < u.getSize(); i++) // * n + c2 instructions
 	{
-		result[i] = t * v[i] + (1 - t) * u[i]; // c3 instructions
+		result[i] = v[i] * t + u[i] * (1 - t); // c3 instructions
 	}
 	return result;
 } //O(n) in time, O(n) in space

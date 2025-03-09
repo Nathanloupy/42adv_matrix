@@ -29,7 +29,7 @@ inline Matrix<K> Matrix<K>::row_echelon_helper(K &determinant) const
 			break;
 
 		size_t i = r;
-		while (i < m && utils::abs(rowEchelonMatrix[i, lead]) < 0.0001f)
+		while (i < m && utils::abs(rowEchelonMatrix[i, lead]) < 1e-5f)
 			i++;
 		
 		if (i == m)

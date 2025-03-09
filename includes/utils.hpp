@@ -7,6 +7,9 @@ namespace utils
 
 	template <typename K>
 	float abs(const K &value);
+
+	template <typename K>
+	float real_part(const K &value);
 }
 
 #include "utils.tpp"
