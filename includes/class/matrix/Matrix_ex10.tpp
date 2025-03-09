@@ -58,7 +58,7 @@ inline Matrix<K> Matrix<K>::row_echelon_helper(K &determinant) const
 			{
 				factor = rowEchelonMatrix[l, lead];
 				for (size_t j = lead; j < n; j++)
-					rowEchelonMatrix[l, j] = factor * rowEchelonMatrix[r, j];
+					rowEchelonMatrix[l, j] = rowEchelonMatrix[l, j] - factor * rowEchelonMatrix[r, j];
 			}
 		}
 		lead++;
