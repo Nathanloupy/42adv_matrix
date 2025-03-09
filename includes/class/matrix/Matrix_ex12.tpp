@@ -1,14 +1,14 @@
 #include "Matrix.hpp"
 
-template <>
-inline Matrix<float> Matrix<float>::inverse(void) const
+template <typename K>
+inline Matrix<K> Matrix<K>::inverse(void) const
 {
 	if (!isSquare())
 		throw NotSquareMatrixException();
-	float determinant = this->determinant();
-	if (determinant == 0)
+	K determinant = this->determinant();
+	if (determinant == K())
 		throw SingularMatrixException();
 	// ...
-	Matrix<float> inverseMatrix(this->getRows(), this->getCols());
+	Matrix<K> inverseMatrix(this->getRows(), this->getCols());
 	return (inverseMatrix);
 }

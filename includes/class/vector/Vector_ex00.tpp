@@ -10,7 +10,9 @@ void Vector<K>::add(const Vector<K> &other)
 		throw IncompatibleSizeException();
 	}
 	for (size_t i = 0; i < this->_size; i++) // * n + c2 instructions
+	{
 		(*this)[i] += other[i]; // c3 instructions
+	}
 } //O(n) in time, O(1) in space
 
 template <typename K>
