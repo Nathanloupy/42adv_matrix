@@ -17,7 +17,7 @@ class Matrix
 
 		// EX10
 		void swapRows(size_t row1, size_t row2);
-		Matrix<K> row_echelon_helper(float &determinant) const;
+		Matrix<K> row_echelon_helper(K &determinant) const;
 
 	public:
 		Matrix(size_t rows, size_t cols);

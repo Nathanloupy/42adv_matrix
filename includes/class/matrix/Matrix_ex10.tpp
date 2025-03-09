@@ -12,16 +12,16 @@ void Matrix<K>::swapRows(size_t row1, size_t row2)
 	}
 }
 
-template <>
-inline Matrix<float> Matrix<float>::row_echelon_helper(float &determinant) const
+template <typename K>
+inline Matrix<K> Matrix<K>::row_echelon_helper(K &determinant) const
 {
-	Matrix<float> rowEchelonMatrix(*this);
+	Matrix<K> rowEchelonMatrix(*this);
 	size_t m = rowEchelonMatrix.getRows();
 	size_t n = rowEchelonMatrix.getCols();
 
 	size_t lead = 0;
-	float pivot = 0.0f;
-	float factor = 0.0f;
+	K pivot = K();
+	K factor = K();
 
 	for (size_t r = 0; r < m; r++)
 	{
@@ -68,9 +68,9 @@ inline Matrix<float> Matrix<float>::row_echelon_helper(float &determinant) const
 
 //TODO: calculate complexity
 
-template <>
-inline Matrix<float> Matrix<float>::row_echelon(void) const
+template <typename K>
+inline Matrix<K> Matrix<K>::row_echelon(void) const
 {
-	float determinant = 1.0f;
+	K determinant = K(1.0f);
 	return (this->row_echelon_helper(determinant));
 }

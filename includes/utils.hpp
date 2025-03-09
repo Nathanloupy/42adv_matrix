@@ -3,10 +3,10 @@
 namespace utils
 {
 	template <typename K>
-	K abs(const K &value);
+	K pow(const K &value, const float &exponent);
 
 	template <typename K>
-	K pow(const K &value, const float &exponent);
+	float abs(const K &value);
 }
 
 #include "utils.tpp"

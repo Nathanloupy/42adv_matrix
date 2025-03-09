@@ -54,4 +54,9 @@ re_run:
 	@make re
 	@./$(NAME) $(test)
 
+run:
+	@clear && clear
+	@make
+	@./$(NAME) $(test)
+
 .PHONY: all clean fclean re re_run

@@ -1,7 +1,6 @@
 #pragma once
 
-#include "commons.hpp"
-
+#include <iostream>
 class Complex
 {
 	public:
@@ -10,6 +9,7 @@ class Complex
 
 		Complex(void);
 		Complex(float real, float imaginary);
+		Complex(float real);
 		~Complex(void);
 
 		Complex &operator=(const Complex &other);
@@ -17,4 +17,10 @@ class Complex
 		Complex operator-(const Complex &other) const;
 		Complex operator*(const Complex &other) const;
 		Complex operator/(const Complex &other) const;	
+		Complex &operator+=(const Complex &other);
+		Complex &operator-=(const Complex &other);
+		Complex &operator*=(const Complex &other);
+		Complex &operator/=(const Complex &other);
 };
+
+std::ostream &operator<<(std::ostream &os, const Complex &complex);
