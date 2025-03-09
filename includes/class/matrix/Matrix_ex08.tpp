@@ -10,7 +10,7 @@ K Matrix<K>::trace() const
 	K result = 0; // c2 instructions
 	for (size_t i = 0; i < this->getRows(); i++) // * n + c3 instructions
 	{
-		result += (*this)[i, i]; // c4 instructions
+		result = result + (*this)[i, i]; // c4 instructions
 	}
 	return result;
 } // O(n) in time, O(1) in space

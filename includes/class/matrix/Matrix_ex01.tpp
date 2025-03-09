@@ -20,7 +20,7 @@ Matrix<K> linear_combination(const std::vector<Matrix<K>> &matrices, const std::
 				{
 					throw IncompatibleSizeException();
 				}
-				result[i, j] += matrices[l][i, j] * scalars[l]; // c6 instructions
+				result[i, j] = result[i, j] + matrices[l][i, j] * scalars[l]; // c6 instructions
 			}
 		}
 	}

@@ -43,11 +43,11 @@ inline Matrix<K> Matrix<K>::row_echelon_helper(K &determinant) const
 		if (i != r)
 		{
 			rowEchelonMatrix.swapRows(r, i);
-			determinant *= -1.0f;
+			determinant = determinant * -1.0f;
 		}
 
 		pivot = rowEchelonMatrix[r, lead];
-		determinant *= pivot;
+		determinant = determinant * pivot;
 
 		for (size_t j = lead; j < n; j++)
 			rowEchelonMatrix[r, j] = rowEchelonMatrix[r, j] / pivot;
@@ -58,7 +58,7 @@ inline Matrix<K> Matrix<K>::row_echelon_helper(K &determinant) const
 			{
 				factor = rowEchelonMatrix[l, lead];
 				for (size_t j = lead; j < n; j++)
-					rowEchelonMatrix[l, j] -= factor * rowEchelonMatrix[r, j];
+					rowEchelonMatrix[l, j] = factor * rowEchelonMatrix[r, j];
 			}
 		}
 		lead++;

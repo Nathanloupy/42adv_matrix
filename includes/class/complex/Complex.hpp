@@ -17,10 +17,14 @@ class Complex
 		Complex operator-(const Complex &other) const;
 		Complex operator*(const Complex &other) const;
 		Complex operator/(const Complex &other) const;	
-		Complex &operator+=(const Complex &other);
-		Complex &operator-=(const Complex &other);
-		Complex &operator*=(const Complex &other);
-		Complex &operator/=(const Complex &other);
+		
+		Complex operator+(float scalar) const;
+		Complex operator-(float scalar) const;
+		Complex operator*(float scalar) const;
+		Complex operator/(float scalar) const;
+		
+		bool operator==(const Complex &other) const;
+		bool operator!=(const Complex &other) const;
 };
 
 std::ostream &operator<<(std::ostream &os, const Complex &complex);

@@ -17,7 +17,7 @@ Vector<K> linear_combination(const std::vector<Vector<K>> &vectors, const std::v
 		{
 			if (vectors[j].getSize() != result.getSize()) // c4 instructions
 				throw IncompatibleSizeException();
-			result[i] += vectors[j][i] * scalars[j]; // c5 instructions
+			result[i] = result[i] + vectors[j][i] * scalars[j]; // c5 instructions
 		}
 	}
 	return result;
