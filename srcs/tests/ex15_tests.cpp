@@ -127,18 +127,10 @@ void test_matrix_ex15(void)
 	size_t i = 0;
 	{
 		std::cout << "Test Matrix ex15 " << ++i << ":" << std::endl;
-		std::vector<Complex> data1 = {
-			Complex(1, 2), Complex(3, 4), Complex(5, 6), 
-			Complex(7, 8), Complex(9, 0), Complex(-1, -2)
-		};
+		std::vector<Complex> data1 = {Complex(1, 2), Complex(3, 4), Complex(5, 6), Complex(7, 8), Complex(9, 0), Complex(-1, -2)};
 		Matrix<Complex> u(2, 3, data1);
-		
-		std::vector<Complex> data2 = {
-			Complex(5, 3), Complex(-2, 0), Complex(8, -1), 
-			Complex(4, 2), Complex(0, 5), Complex(3, 3)
-		};
+		std::vector<Complex> data2 = {Complex(5, 3), Complex(-2, 0), Complex(8, -1), Complex(4, 2), Complex(0, 5), Complex(3, 3)};
 		Matrix<Complex> v(2, 3, data2);
-		
 		std::cout << "u: " << std::endl << u;
 		std::cout << "v: " << std::endl << v;
 		std::cout << "u + v: " << std::endl;
@@ -148,18 +140,10 @@ void test_matrix_ex15(void)
 	}
 	{
 		std::cout << "Test Matrix ex15 " << ++i << ":" << std::endl;
-		std::vector<Complex> data1 = {
-			Complex(1, 2), Complex(3, 4), 
-			Complex(5, 6), Complex(7, 8)
-		};
+		std::vector<Complex> data1 = {Complex(1, 2), Complex(3, 4), Complex(5, 6), Complex(7, 8)};
 		Matrix<Complex> u(2, 2, data1);
-		
-		std::vector<Complex> data2 = {
-			Complex(0.5, 0.3), Complex(-0.2, 1.0), 
-			Complex(0.8, -1.1), Complex(0.4, 0.2)
-		};
+		std::vector<Complex> data2 = {Complex(5, 3), Complex(-2, 0), Complex(8, -1), Complex(4, 2)};
 		Matrix<Complex> v(2, 2, data2);
-		
 		std::cout << "u: " << std::endl << u;
 		std::cout << "v: " << std::endl << v;
 		std::cout << "u - v: " << std::endl;
@@ -169,14 +153,9 @@ void test_matrix_ex15(void)
 	}
 	{
 		std::cout << "Test Matrix ex15 " << ++i << ":" << std::endl;
-		std::vector<Complex> data = {
-			Complex(2, 0), Complex(0, 3), Complex(-1, 1),
-			Complex(4, -2), Complex(0, 0), Complex(2, 5),
-			Complex(1, 1), Complex(-3, 0), Complex(2, -2)
-		};
+		std::vector<Complex> data = {Complex(2, 0), Complex(0, 3), Complex(-1, 1), Complex(4, -2), Complex(0, 0), Complex(2, 5), Complex(1, 1), Complex(-3, 0), Complex(2, -2)};
 		Matrix<Complex> u(3, 3, data);
 		Complex scalar(2, 3);
-		
 		std::cout << "u: " << std::endl << u;
 		std::cout << "scalar: " << scalar << std::endl;
 		std::cout << "u * scalar: " << std::endl;
@@ -186,18 +165,10 @@ void test_matrix_ex15(void)
 	}
 	{
 		std::cout << "Test Matrix ex15 " << ++i << ":" << std::endl;
-		std::vector<Complex> data1 = {
-			Complex(3, 1), Complex(2, 5), 
-			Complex(0, 4), Complex(1, 0)
-		};
+		std::vector<Complex> data1 = {Complex(3, 1), Complex(2, 5), Complex(0, 4), Complex(1, 0)};
 		Matrix<Complex> u(2, 2, data1);
-		
-		std::vector<Complex> data2 = {
-			Complex(7, 3), Complex(0, 2), 
-			Complex(4, -1), Complex(8, 6)
-		};
+		std::vector<Complex> data2 = {Complex(7, 3), Complex(0, 2), Complex(4, -1), Complex(8, 6)};
 		Matrix<Complex> v(2, 2, data2);
-		
 		std::cout << "u: " << std::endl << u;
 		std::cout << "v: " << std::endl << v;
 		std::cout << "Linear interpolation of u and v with t=0.6: " << std::endl;
@@ -206,18 +177,10 @@ void test_matrix_ex15(void)
 	}
 	{
 		std::cout << "Test Matrix ex15 " << ++i << ":" << std::endl;
-		std::vector<Complex> data1 = {
-			Complex(1, 0), Complex(0, 1), 
-			Complex(2, 3), Complex(4, 0)
-		};
+		std::vector<Complex> data1 = {Complex(1, 0), Complex(0, 1), Complex(2, 3), Complex(4, 0)};
 		Matrix<Complex> u(2, 2, data1);
-		
-		std::vector<Complex> data2 = {
-			Complex(3, 2), Complex(0, 5), 
-			Complex(1, 1), Complex(2, 2)
-		};
+		std::vector<Complex> data2 = {Complex(3, 2), Complex(0, 5), Complex(1, 1), Complex(2, 2)};
 		Matrix<Complex> v(2, 2, data2);
-		
 		std::cout << "u: " << std::endl << u;
 		std::cout << "v: " << std::endl << v;
 		std::cout << "u * v: " << std::endl;
@@ -226,11 +189,7 @@ void test_matrix_ex15(void)
 	}
 	{
 		std::cout << "Test Matrix ex15 " << ++i << ":" << std::endl;
-		std::vector<Complex> data = {
-			Complex(2, 2), Complex(3, 1), Complex(0, 0),
-			Complex(1, 4), Complex(5, 5), Complex(2, -1),
-			Complex(-2, 3), Complex(0, 2), Complex(4, 7)
-		};
+		std::vector<Complex> data = {Complex(2, 2), Complex(3, 1), Complex(0, 0), Complex(1, 4), Complex(5, 5), Complex(2, -1), Complex(-2, 3), Complex(0, 2), Complex(4, 7)};
 		Matrix<Complex> u(3, 3, data);
 		std::cout << "u: " << std::endl << u;
 		std::cout << "Trace of u: " << std::endl;
@@ -239,11 +198,7 @@ void test_matrix_ex15(void)
 	}
 	{
 		std::cout << "Test Matrix ex15 " << ++i << ":" << std::endl;
-		std::vector<Complex> data = {
-			Complex(1, 2), Complex(3, 4), 
-			Complex(5, 6), Complex(7, 8),
-			Complex(9, 0), Complex(-1, -2)
-		};
+		std::vector<Complex> data = {Complex(1, 2), Complex(3, 4), Complex(5, 6), Complex(7, 8), Complex(9, 0), Complex(-1, -2)};
 		Matrix<Complex> u(3, 2, data);
 		std::cout << "u: " << std::endl << u;
 		std::cout << "Transpose of u: " << std::endl;
@@ -252,10 +207,7 @@ void test_matrix_ex15(void)
 	}
 	{
 		std::cout << "Test Matrix ex15 " << ++i << ":" << std::endl;
-		std::vector<Complex> data = {
-			Complex(1, 1), Complex(2, 0), Complex(3, 2),
-			Complex(4, -1), Complex(5, 3), Complex(6, 0)
-		};
+		std::vector<Complex> data = {Complex(1, 1), Complex(2, 0), Complex(3, 2), Complex(4, -1), Complex(5, 3), Complex(6, 0)};
 		Matrix<Complex> u(2, 3, data);
 		std::cout << "u: " << std::endl << u;
 		std::cout << "Row echelon form of u: " << std::endl;
@@ -264,10 +216,7 @@ void test_matrix_ex15(void)
 	}
 	{
 		std::cout << "Test Matrix ex15 " << ++i << ":" << std::endl;
-		std::vector<Complex> data = {
-			Complex(3, 0), Complex(1, 2),
-			Complex(2, 1), Complex(4, -1)
-		};
+		std::vector<Complex> data = {Complex(3, 0), Complex(1, 2), Complex(2, 1), Complex(4, -1)};
 		Matrix<Complex> u(2, 2, data);
 		std::cout << "u: " << std::endl << u;
 		std::cout << "Determinant of u: " << std::endl;
@@ -276,10 +225,7 @@ void test_matrix_ex15(void)
 	}
 	{
 		std::cout << "Test Matrix ex15 " << ++i << ":" << std::endl;
-		std::vector<Complex> data = {
-			Complex(2, 1), Complex(3, 0),
-			Complex(1, -1), Complex(4, 2)
-		};
+		std::vector<Complex> data = {Complex(2, 1), Complex(3, 0), Complex(1, -1), Complex(4, 2)};
 		Matrix<Complex> u(2, 2, data);
 		std::cout << "u: " << std::endl << u;
 		std::cout << "Inverse of u: " << std::endl;
@@ -295,11 +241,7 @@ void test_matrix_ex15(void)
 	}
 	{
 		std::cout << "Test Matrix ex15 " << ++i << ":" << std::endl;
-		std::vector<Complex> data = {
-			Complex(1, 0), Complex(2, 1), Complex(3, 2),
-			Complex(0, 1), Complex(1, 1), Complex(2, 0),
-			Complex(0, 0), Complex(0, 0), Complex(0, 0)
-		};
+		std::vector<Complex> data = {Complex(1, 0), Complex(2, 1), Complex(3, 2), Complex(0, 1), Complex(1, 1), Complex(2, 0), Complex(0, 0), Complex(0, 0), Complex(0, 0)};
 		Matrix<Complex> u(3, 3, data);
 		std::cout << "u: " << std::endl << u;
 		std::cout << "Rank of u: " << std::endl;
@@ -308,17 +250,10 @@ void test_matrix_ex15(void)
 	}
 	{
 		std::cout << "Test Matrix ex15 " << ++i << ":" << std::endl;
-		std::vector<Complex> matrix_data = {
-			Complex(1, 1), Complex(0, 2), Complex(3, 0),
-			Complex(2, 1), Complex(4, 3), Complex(1, 2)
-		};
+		std::vector<Complex> matrix_data = {Complex(1, 1), Complex(0, 2), Complex(3, 0), Complex(2, 1), Complex(4, 3), Complex(1, 2)};
 		Matrix<Complex> matrix(2, 3, matrix_data);
-		
-		std::vector<Complex> vector_data = {
-			Complex(2, 1), Complex(0, 1), Complex(3, 2)
-		};
+		std::vector<Complex> vector_data = {Complex(2, 1), Complex(0, 1), Complex(3, 2)};
 		Vector<Complex> vec(vector_data);
-		
 		std::cout << "Matrix: " << std::endl << matrix;
 		std::cout << "Vector: " << std::endl << vec;
 		std::cout << "Matrix * Vector: " << std::endl;
