@@ -9,4 +9,7 @@ namespace utils
 	float abs(const K &value);
 }
 
+template <typename K>
+K lerp(const K &start, const K &end, const float &t);
+
 #include "utils.tpp"

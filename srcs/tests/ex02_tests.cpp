@@ -36,10 +36,24 @@ void test_matrix_ex02(void)
 	std::cout << result << std::endl;
 }
 
+void test_numbers_ex02(void)
+{
+	std::cout << "Test Numbers ex02" << std::endl;
+	float u = 1.0f;
+	std::cout << "u: " << u << std::endl;
+	float v = 4.0f;
+	std::cout << "v: " << v << std::endl;
+	float t = 0.7f;
+	std::cout << "t: " << t << std::endl;
+	float result = lerp(u, v, t);
+	std::cout << "result: " << result << std::endl;
+}
+
 void test_ex02(void)
 {
 	std::cout << "Ex02 tests : [Vector/Matrix] Linear interpolation" << std::endl;
 	test_vector_ex02();
 	test_matrix_ex02();
+	test_numbers_ex02();
 	std::cout << "--------------------------------" << std::endl;
 }
