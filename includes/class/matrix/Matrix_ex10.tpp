@@ -34,7 +34,7 @@ inline Matrix<K> Matrix<K>::row_echelon_helper(K &determinant) const
 		
 		if (i == m)
 		{
-			determinant = 0.0f;
+			determinant = K();
 			lead++;
 			r--;
 			continue;
