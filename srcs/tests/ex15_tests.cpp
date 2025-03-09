@@ -73,8 +73,8 @@ void test_vector_ex15(void)
 		Vector<Complex> v(data2);
 		std::cout << "u: " << std::endl << u;
 		std::cout << "v: " << std::endl << v;
-		std::cout << "Lerp from u to v with t = 0.5: " << std::endl;
-		Vector<Complex> result = lerp(u, v, 0.5f);
+		std::cout << "Lerp from u to v with t = 0.6: " << std::endl;
+		Vector<Complex> result = lerp(u, v, 0.6f);
 		std::cout << result;
 	}
 	{
@@ -200,8 +200,8 @@ void test_matrix_ex15(void)
 		
 		std::cout << "u: " << std::endl << u;
 		std::cout << "v: " << std::endl << v;
-		std::cout << "Linear interpolation of u and v with t=0.5: " << std::endl;
-		Matrix<Complex> result = lerp(u, v, 0.5f);
+		std::cout << "Linear interpolation of u and v with t=0.6: " << std::endl;
+		Matrix<Complex> result = lerp(u, v, 0.6f);
 		std::cout << result;
 	}
 	{
