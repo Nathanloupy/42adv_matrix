@@ -7,7 +7,8 @@ NAME = matrix
 
 INCLUDES = -I./includes/ -I./includes/class/ -I./includes/class/matrix/ -I./includes/class/vector/ -I./includes/class/complex/
 
-SRCS_MAIN = srcs/main.cpp
+SRCS_MAIN = srcs/main.cpp \
+			srcs/display.cpp
 SRCS_CLASS = srcs/class/Complex.cpp
 SRCS_TESTS = srcs/tests/base_tests.cpp \
 			srcs/tests/ex00_tests.cpp \
@@ -24,7 +25,6 @@ SRCS_TESTS = srcs/tests/base_tests.cpp \
 			srcs/tests/ex11_tests.cpp \
 			srcs/tests/ex12_tests.cpp \
 			srcs/tests/ex13_tests.cpp \
-			srcs/tests/ex14_tests.cpp \
 			srcs/tests/ex15_tests.cpp
 
 OBJS_MAIN = $(SRCS_MAIN:.cpp=.o)

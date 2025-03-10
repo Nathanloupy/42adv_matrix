@@ -64,6 +64,10 @@ class Matrix
 
 		// EX13
 		size_t rank(void) const;
+
+		// EX14
+		void exportToProj(void) const;
+		static Matrix<float> projection(float fov, float ratio, float near, float far);
 };
 
 template <typename K>
@@ -89,3 +93,4 @@ Matrix<K> lerp(const Matrix<K> &u, const Matrix<K> &v, const float &t);
 #include "Matrix_ex11.tpp"
 #include "Matrix_ex12.tpp"
 #include "Matrix_ex13.tpp"
+#include "Matrix_ex14.tpp"

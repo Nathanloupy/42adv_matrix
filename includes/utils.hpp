@@ -1,5 +1,6 @@
 #pragma once
 
+void display(void);
 namespace utils
 {
 	template <typename K>
