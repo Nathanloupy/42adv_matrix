@@ -5,7 +5,7 @@
 template <typename K>
 float Vector<K>::norm_1() const
 {
-	float result = 0; // c1 instructions
+	float result = 0; // c1 instructions (space : O(1))
 	for (size_t i = 0; i < this->getSize(); i++) // * n + c2 instructions
 	{
 		result = result + utils::abs(this->_data[i]); // c3 instructions
@@ -16,7 +16,7 @@ float Vector<K>::norm_1() const
 template <typename K>
 float Vector<K>::norm() const
 {
-	float sum_of_squares = 0; // c1 instructions
+	float sum_of_squares = 0; // c1 instructions (space : O(1))
 	for (size_t i = 0; i < this->getSize(); i++) // * n + c2 instructions
 	{
 		sum_of_squares = sum_of_squares + utils::pow(utils::abs(this->_data[i]), 2.0f); // c3 instructions
@@ -27,7 +27,7 @@ float Vector<K>::norm() const
 template <typename K>
 float Vector<K>::norm_inf() const
 {
-	float result = 0; // c1 instructions
+	float result = 0; // c1 instructions (space : O(1))
 	for (size_t i = 0; i < this->getSize(); i++) // * n + c2 instructions
 	{
 		if (utils::abs(this->_data[i]) > result) // c3 instructions

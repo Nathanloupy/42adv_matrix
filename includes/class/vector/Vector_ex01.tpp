@@ -10,14 +10,14 @@ Vector<K> linear_combination(const std::vector<Vector<K>> &vectors, const std::v
 	{
 		throw IncompatibleSizeException();
 	}
-	Vector<K> result(vectors[0].getSize());
-	for (size_t i = 0; i < result.getSize(); i++) // * n + c2 instructions
+	Vector<K> result(vectors[0].getSize()); // c2 instructions (space : O(n))
+	for (size_t i = 0; i < result.getSize(); i++) // * n + c3 instructions
 	{
-		for (size_t j = 0; j < vectors.size(); j++) // * k + c3 instructions
+		for (size_t j = 0; j < vectors.size(); j++) // * k + c4 instructions
 		{
-			if (vectors[j].getSize() != result.getSize()) // c4 instructions
+			if (vectors[j].getSize() != result.getSize()) // c5 instructions
 				throw IncompatibleSizeException();
-			result[i] = result[i] + vectors[j][i] * scalars[j]; // c5 instructions
+			result[i] = result[i] + vectors[j][i] * scalars[j]; // c6 instructions
 		}
 	}
 	return result;

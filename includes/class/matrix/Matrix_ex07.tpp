@@ -9,7 +9,7 @@ Vector<K> Matrix<K>::mul_vec(const Vector<K> &vec) const
 	{
 		throw IncompatibleSizeException();
 	}
-	Vector<K> result(this->getRows()); // c2 instructions
+	Vector<K> result(this->getRows()); // c2 instructions (space : O(n))
 	for (size_t i = 0; i < this->getRows(); i++) // * n + c3 instructions
 	{
 		for (size_t j = 0; j < this->getCols(); j++) // * m + c4 instructions
@@ -27,7 +27,7 @@ Matrix<K> Matrix<K>::mul_mat(const Matrix<K> &mat) const
 	{
 		throw IncompatibleSizeException();
 	}
-	Matrix<K> result(this->getRows(), mat.getCols()); // c2 instructions
+	Matrix<K> result(this->getRows(), mat.getCols()); // c2 instructions (space : O(np))
 	for (size_t i = 0; i < this->getRows(); i++) // * n + c3 instructions
 	{
 		for (size_t j = 0; j < mat.getCols(); j++) // * m + c4 instructions

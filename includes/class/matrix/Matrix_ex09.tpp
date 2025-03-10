@@ -3,7 +3,7 @@
 template <typename K>
 Matrix<K> Matrix<K>::transpose(void) const
 {
-	Matrix<K> result(this->getCols(), this->getRows()); // c1 instructions
+	Matrix<K> result(this->getCols(), this->getRows()); // c1 instructions (space : O(nm))
 	for (size_t i = 0; i < this->getRows(); i++) // * m + c2 instructions
 	{
 		for (size_t j = 0; j < this->getCols(); j++) // * n + c3 instructions

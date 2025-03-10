@@ -15,9 +15,12 @@ class Matrix
 		size_t			_cols;
 		std::vector<K>	_data;
 
-		// EX10
+		// EX10 utils
 		void swapRows(size_t row1, size_t row2);
 		Matrix<K> row_echelon_helper(K &determinant) const;
+
+		// EX12 utils
+		Matrix<K> augmented_matrix_identity(void) const;
 
 	public:
 		Matrix(size_t rows, size_t cols);

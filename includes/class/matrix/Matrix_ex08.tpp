@@ -7,7 +7,7 @@ K Matrix<K>::trace() const
 	{
 		throw NotSquareMatrixException();
 	}
-	K result = 0; // c2 instructions
+	K result = K(); // c2 instructions (space : O(1))
 	for (size_t i = 0; i < this->getRows(); i++) // * n + c3 instructions
 	{
 		result = result + (*this)[i, i]; // c4 instructions

@@ -14,4 +14,4 @@ Vector<K> cross_product(const Vector<K> &u, const Vector<K> &v)
 	result[1] = u[2] * v[0] - u[0] * v[2];
 	result[2] = u[0] * v[1] - u[1] * v[0];
 	return result;
-}
+} //time and space complexity not needed
