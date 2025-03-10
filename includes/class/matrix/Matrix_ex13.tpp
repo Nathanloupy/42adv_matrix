@@ -9,7 +9,7 @@ inline size_t Matrix<K>::rank(void) const
 	{
 		for (size_t j = 0; j < rowEchelonMatrix.getCols(); j++) // * n + c3 instructions
 		{
-			if (rowEchelonMatrix[i, j] != K()) // c4 instructions
+			if (rowEchelonMatrix(i, j) != K()) // c4 instructions
 			{
 				rank++; // c5 instructions
 				break;

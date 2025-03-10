@@ -6,9 +6,9 @@ void Matrix<K>::swapRows(size_t row1, size_t row2)
 {
 	for (size_t j = 0; j < this->getCols(); j++) // * n + c1 instructions
 	{
-		K temp = (*this)[row1, j]; // c2 instructions
-		(*this)[row1, j] = (*this)[row2, j]; // c3 instructions
-		(*this)[row2, j] = temp; // c4 instructions
+		K temp = (*this)(row1, j); // c2 instructions
+		(*this)(row1, j) = (*this)(row2, j); // c3 instructions
+		(*this)(row2, j) = temp; // c4 instructions
 	}
 } //O(n) in time, O(1) in space
 
@@ -31,7 +31,7 @@ inline Matrix<K> Matrix<K>::row_echelon_helper(K &determinant) const
 			break;
 
 		i = r; // c4 instructions
-		while (i < m && utils::abs(rowEchelonMatrix[i, lead]) < 1e-5f) // * m + c5 instructions (worst case : m)
+		while (i < m && utils::abs(rowEchelonMatrix(i, lead)) < 1e-5f) // * m + c5 instructions (worst case : m)
 			i++;
 		
 		if (i == m)
@@ -48,19 +48,19 @@ inline Matrix<K> Matrix<K>::row_echelon_helper(K &determinant) const
 			determinant = determinant * -1.0f; // c8 instructions
 		}
 
-		pivot = rowEchelonMatrix[r, lead]; // c9 instructions
+		pivot = rowEchelonMatrix(r, lead); // c9 instructions
 		determinant = determinant * pivot; // c10 instructions
 
 		for (size_t j = lead; j < n; j++) // * n + c11 instructions
-			rowEchelonMatrix[r, j] = rowEchelonMatrix[r, j] / pivot; // c12 instructions
+			rowEchelonMatrix(r, j) = rowEchelonMatrix(r, j) / pivot; // c12 instructions
 		
 		for (size_t l = 0; l < m; l++) // * m + c13 instructions
 		{
 			if (l != r) // c14 instructions
 			{
-				factor = rowEchelonMatrix[l, lead]; // c15 instructions
+				factor = rowEchelonMatrix(l, lead); // c15 instructions
 				for (size_t j = lead; j < n; j++) // * n + c16 instructions
-					rowEchelonMatrix[l, j] = rowEchelonMatrix[l, j] - factor * rowEchelonMatrix[r, j]; // c17 instructions
+					rowEchelonMatrix(l, j) = rowEchelonMatrix(l, j) - factor * rowEchelonMatrix(r, j); // c17 instructions
 			}
 		}
 		lead++; // c18 instructions

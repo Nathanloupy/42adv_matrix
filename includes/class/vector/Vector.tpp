@@ -76,7 +76,7 @@ void Vector<K>::toMatrix(Matrix<K> &matrix) const
 	{
 		for (size_t i = 0; i < matrix.getRows(); i++)
 		{
-			matrix[i, j] = (*this)[j * matrix.getRows() + i];
+			matrix(i, j) = (*this)[j * matrix.getRows() + i];
 		}
 	}
 }

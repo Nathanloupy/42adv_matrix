@@ -7,9 +7,9 @@ Matrix<K> Matrix<K>::augmented_matrix_identity(void) const
 	size_t n = this->getRows();
 	for (size_t i = 0; i < n; i++) // * n + c2 instructions
 		for (size_t j = 0; j < n; j++) // * n + c3 instructions
-			augmentedMatrix[i, j] = this->operator[](i, j); // c4 instructions
+			augmentedMatrix(i, j) = (*this)(i, j); // c4 instructions
 	for (size_t i = 0; i < n; i++) // * n + c5 instructions
-		augmentedMatrix[i, i + n] = K(1.0f); // c6 instructions
+		augmentedMatrix(i, i + n) = K(1.0f); // c6 instructions
 	return (augmentedMatrix);
 } // O(n^2) in time, O(n^2) in space
 
@@ -28,7 +28,7 @@ inline Matrix<K> Matrix<K>::inverse(void) const
 	for (size_t i = 0; i < n; i++) // * n + c10 instructions
 	{
 		for (size_t j = 0; j < n; j++) // * n + c11 instructions
-			inverseMatrix[i, j] = augmentedMatrix[i, j + n]; // c12 instructions
+			inverseMatrix(i, j) = augmentedMatrix(i, j + n); // c12 instructions
 	}
 	return (inverseMatrix);
 } // O(n^3) in time, O(n^2) in space

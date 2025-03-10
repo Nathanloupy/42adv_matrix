@@ -14,7 +14,7 @@ Matrix<K> lerp(const Matrix<K> &u, const Matrix<K> &v, const float &t)
 	{
 		for (size_t j = 0; j < u.getCols(); j++) // * m + c4 instructions
 		{
-			result[i, j] = v[i, j] * t + u[i, j] * (1 - t); // c5 instructions
+			result(i, j) = v(i, j) * t + u(i, j) * (1 - t); // c5 instructions
 		}
 	}
 	return result;

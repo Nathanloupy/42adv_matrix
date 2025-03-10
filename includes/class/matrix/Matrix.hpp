@@ -29,8 +29,8 @@ class Matrix
 		Matrix(size_t rows, size_t cols, const std::vector<K> &data);
 		~Matrix();
 
-		const K &operator[](size_t row, size_t col) const;
-		K &operator[](size_t row, size_t col);
+		const K &operator()(size_t row, size_t col) const;
+		K &operator()(size_t row, size_t col);
 
 		bool	isSquare() const;
 		size_t	getRows() const;

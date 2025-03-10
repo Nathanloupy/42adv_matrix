@@ -13,7 +13,7 @@ void Matrix<K>::add(const Matrix<K> &other)
 	{
 		for (size_t j = 0; j < this->_cols; j++) // * m + c3 instructions
 		{
-			(*this)[i, j] = (*this)[i, j] + other[i, j]; // c4 instructions
+			(*this)(i, j) = (*this)(i, j) + other(i, j); // c4 instructions
 		}
 	}
 } //O(nm) in time, O(1) in space
@@ -29,7 +29,7 @@ void Matrix<K>::sub(const Matrix<K> &other)
 	{
 		for (size_t j = 0; j < this->_cols; j++) // * m + c3 instructions
 		{
-			(*this)[i, j] = (*this)[i, j] - other[i, j]; // c4 instructions
+			(*this)(i, j) = (*this)(i, j) - other(i, j); // c4 instructions
 		}
 	}
 } //O(nm) in time, O(1) in space
@@ -41,7 +41,7 @@ void Matrix<K>::scl(const K &scalar)
 	{
 		for (size_t j = 0; j < this->_cols; j++) // * m + c2 instructions
 		{
-			(*this)[i, j] = (*this)[i, j] * scalar; // c3 instructions
+			(*this)(i, j) = (*this)(i, j) * scalar; // c3 instructions
 		}
 	}
 } //O(nm) in time, O(1) in space

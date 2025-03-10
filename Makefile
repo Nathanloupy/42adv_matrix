@@ -1,7 +1,9 @@
 # Makefile for Matrix
 
 CXX = c++
-CXXFLAGS = -Wall -Wextra -Werror -std=c++23
+CXXFLAGS = -Wall -Wextra -Werror
+
+MAKEFLAGS += --no-print-directory
 
 NAME = matrix
 

@@ -35,7 +35,7 @@ Matrix<K>::Matrix(size_t rows, size_t cols, const std::vector<K> &data) : _rows(
 	for (size_t j = 0; j < this->_cols; j++)
 	{
 		for (size_t i = 0; i < this->_rows; i++)
-			(*this)[i, j] = data[j * this->_rows + i];
+			(*this)(i, j) = data[j * this->_rows + i];
 	}
 }
 
@@ -68,7 +68,7 @@ size_t Matrix<K>::getCols() const
 }
 
 template <typename K>
-const K &Matrix<K>::operator[](size_t row, size_t col) const
+const K &Matrix<K>::operator()(size_t row, size_t col) const
 {
 	if (row >= this->_rows || col >= this->_cols)
 	{
@@ -78,7 +78,7 @@ const K &Matrix<K>::operator[](size_t row, size_t col) const
 }
 
 template <typename K>
-K &Matrix<K>::operator[](size_t row, size_t col)
+K &Matrix<K>::operator()(size_t row, size_t col)
 {
 	if (row >= this->_rows || col >= this->_cols)
 	{
@@ -103,7 +103,7 @@ void Matrix<K>::toVector(Vector<K> &vector) const
 	for (size_t j = 0; j < this->_cols; j++)
 	{
 		for (size_t i = 0; i < this->_rows; i++)
-			vector[j * this->_rows + i] = (*this)[i, j];
+			vector[j * this->_rows + i] = (*this)(i, j);
 	}
 }
 
@@ -115,7 +115,7 @@ std::ostream &operator<<(std::ostream &os, const Matrix<K> &matrix)
 		os << "[ ";
 		for (size_t j = 0; j < matrix.getCols(); j++)
 		{
-			os << matrix[i, j] << " ";
+			os << matrix(i, j) << " ";
 		}
 		os << "]" << "\n";
 	}
