@@ -9,5 +9,5 @@ void display(void)
 {
 	Matrix<float> projectionMatrix = Matrix<float>::projection(FOV, RATIO, NEAR, FAR);
 	projectionMatrix.exportToProj();
-	std::cout << "Projection matrix exported to proj" << std::endl;
+	std::cout << "Projection matrix successfully exported to proj file!" << std::endl;
 }

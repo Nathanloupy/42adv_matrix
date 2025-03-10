@@ -27,14 +27,15 @@ template <>
 inline Matrix<float> Matrix<float>::projection(float fov, float ratio, float near, float far)
 {
 	float fov_rad = fov * (M_PI / 180.0f);
-	float tan_half_fov = tan(fov_rad / 2.0f);
-	float z_range = far - near;
+	float tangent = std::tanf(fov_rad / 2.0f);
+	float top = near * tangent;
+	float right = top * ratio;
 	Matrix<float> projection(4, 4);
-	projection[0, 0] = 1.0f / (ratio * tan_half_fov);
-	projection[1, 1] = 1.0f / tan_half_fov;
-	projection[2, 2] = -(far + near) / z_range;
-	projection[2, 3] = -2.0f * near * far / z_range;
-	projection[3, 2] = -1.0f;
+	projection[0, 0] = near / right;
+	projection[1, 1] = near / top;
+	projection[2, 2] = -(far + near) / (far - near);
+	projection[3, 2] = -(2.0f * far * near) / (far - near);
+	projection[2, 3] = -1.0f;
 	return projection;
 }
 
