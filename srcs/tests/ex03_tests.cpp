@@ -18,4 +18,5 @@ void test_ex03(void)
 {
 	std::cout << "Ex03 tests : [Vector] Dot product" << std::endl;
 	test_vector_ex03();
+	std::cout << "--------------------------------" << std::endl;
 }
