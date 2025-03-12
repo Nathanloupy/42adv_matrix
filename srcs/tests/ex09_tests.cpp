@@ -1,6 +1,6 @@
 #include "commons.hpp"
 
-void test_matrix_ex09(void)
+static void test_matrix_ex09(void)
 {
 	size_t i = 0;
 	{
@@ -36,6 +36,7 @@ void test_matrix_ex09(void)
 		std::cout << u.transpose();
 	}
 }
+
 void test_ex09(void)
 {
 	std::cout << "Ex09 tests : [Matrix] Transpose" << std::endl;

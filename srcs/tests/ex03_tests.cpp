@@ -1,6 +1,6 @@
 #include "commons.hpp"
 
-void test_vector_ex03(void)
+static void test_vector_ex03(void)
 {
 	std::vector<float> data1 = {1.0f, 2.0f, 3.0f};
 	Vector<float> u(data1);

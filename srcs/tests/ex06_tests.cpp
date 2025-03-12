@@ -1,6 +1,6 @@
 #include "commons.hpp"
 
-void test_vector_ex06(void)
+static void test_vector_ex06(void)
 {
 	Vector<float> u({4.0f, 2.0f, -3.0f});
 	Vector<float> v({-2.0f, -5.0f, 16.0f});

@@ -1,6 +1,6 @@
 #include "commons.hpp"
 
-void test_matrix_ex10(void)
+static void test_matrix_ex10(void)
 {
 	static int i = 0;
 	{

@@ -1,6 +1,6 @@
 #include "commons.hpp"
 
-void test_matrix_ex12(void)
+static void test_matrix_ex12(void)
 {
 	size_t i = 0;
 	{

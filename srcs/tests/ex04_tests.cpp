@@ -1,6 +1,6 @@
 #include "commons.hpp"
 
-void test_vector_ex04(void)
+static void test_vector_ex04(void)
 {
 	std::vector<float> data = {21.0f, -21.0f, -42.0f};
 	Vector<float> v(data);

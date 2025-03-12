@@ -1,6 +1,6 @@
 #include "commons.hpp"
 
-void test_vector_ex01(void)
+static void test_vector_ex01(void)
 {
 	std::cout << "Test Vector ex01" << std::endl;
 	std::vector<float> data1 = {1.0f, 2.0f, 3.0f};
@@ -24,7 +24,7 @@ void test_vector_ex01(void)
 	std::cout << result << std::endl;
 }
 
-void test_matrix_ex01(void)
+static void test_matrix_ex01(void)
 {
 	std::cout << "Test Matrix ex01" << std::endl;
 	std::vector<float> data1 = {1.0f, 2.0f, 3.0f, 4.0f, 5.0f, 6.0f};

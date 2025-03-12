@@ -1,6 +1,6 @@
 #include "commons.hpp"
 
-void test_vector_base(void)
+static void test_vector_base(void)
 {
 	size_t i = 0;
 	{
@@ -39,7 +39,7 @@ void test_vector_base(void)
 	}
 }
 
-void test_matrix_base(void)
+static void test_matrix_base(void)
 {
 	size_t i = 0;
 	{

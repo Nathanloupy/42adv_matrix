@@ -1,6 +1,6 @@
 #include "commons.hpp"
 
-void test_vector_ex15(void)
+static void test_vector_ex15(void)
 {
 	size_t i = 0;
 	{
@@ -122,7 +122,7 @@ void test_vector_ex15(void)
 	}
 }
 
-void test_matrix_ex15(void)
+static void test_matrix_ex15(void)
 {
 	size_t i = 0;
 	{

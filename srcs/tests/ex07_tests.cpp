@@ -1,6 +1,6 @@
 #include "commons.hpp"
 
-void test_matrix_ex07_mul_vec(void)
+static void test_matrix_ex07_mul_vec(void)
 {
 	std::cout << "Test Matrix ex07 mul_vec" << std::endl;
 	std::vector<float> data1 = {1.0f, 2.0f, -1.0f, 3.0f, 1.0f, -2.0f};
@@ -16,7 +16,7 @@ void test_matrix_ex07_mul_vec(void)
 	std::cout << result;
 }
 
-void test_matrix_ex07_mul_mat(void)
+static void test_matrix_ex07_mul_mat(void)
 {
 	std::cout << "Test Matrix ex07 mul_mat" << std::endl;
 	Matrix<float> u(2, 3, {1.0f, 2.0f, -1.0f, 3.0f, 1.0f, -2.0f});
@@ -30,7 +30,7 @@ void test_matrix_ex07_mul_mat(void)
 	std::cout << result;
 }
 
-void test_matrix_ex07(void)
+static void test_matrix_ex07(void)
 {
 	test_matrix_ex07_mul_vec();
 	test_matrix_ex07_mul_mat();
