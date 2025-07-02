@@ -1,6 +1,6 @@
-# 42adv_matrix
+# matrix
 
-This project serves as an introduction to advanced linear algebra coded in C++. The project implements Vector and Matrix classes with support for templated types including Complex numbers. The project is structured as a series of progressive exercises.
+This project serves as an introduction to advanced linear algebra written in C++. The project implements Vector and Matrix classes with support for templated types including Complex numbers. The project is structured as a series of progressive exercises.
 
 ### Usage
 
